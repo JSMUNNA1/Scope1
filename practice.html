@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">bbc</button>
+    <script>
+      let btn = document.querySelector("#btn");
+      function sizeManage(size) {
+        return function () {
+          size += size;
+          console.log("In", size);
+          btn.style.size = `${size}px`;
+        };
+      }
+      function btnsize() {
+        let a = sizeManage(100);
+        a();
+        a();
+        let b = sizeManage(200);
+        b();
+        console.log(")0");
+      }
+      btn.addEventListener("click", btnsize);
+    </script>
+  </body>
+</html>
