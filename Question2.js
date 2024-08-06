@@ -12,5 +12,5 @@ function printX(){
   console.log(y);
   console.log(x);
 }
-console.log(y);
+console.log(y);//give the Error because y is block-scope
 
